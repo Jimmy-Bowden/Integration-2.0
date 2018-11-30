@@ -6,26 +6,25 @@ quat: #B4BAD7
 quin: #7797BF
 */
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     font-family: sans-serif !important;
     overflow: hidden;
-       /* The image used */
-    background-image: url("img/abstract-astro-astronomy-956999.jpg");
+    /* The image used */
+    background-image: url("../img/abstract-astro-astronomy-956999.jpg");
 
     /* Full height */
- 
+
 
     /* Center and scale the image nicely */
-    background-position:center;
-    background-repeat:space !important;
+    background-position: center;
+    background-repeat: space !important;
     background-size: cover;
 }
 
-div.bg {
- 
-}
+div.bg {}
 
 
 ul.nav {
@@ -33,7 +32,7 @@ ul.nav {
     margin: 0;
     padding: 0;
     width: 25%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     font-weight: 600;
     font-size: 18px;
     border: none !important;
@@ -49,14 +48,14 @@ ul.nav li a {
     padding: 8px 16px;
     text-decoration: none;
 }
- 
+
 ul.nav li a.active {
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
 }
 
 ul.nav li a:hover:not(.active) {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
 }
 
@@ -72,15 +71,19 @@ div.main {
         height: auto;
         position: relative;
     }
+
     ul.nav li a {
         float: left;
         padding: 15px;
     }
-    div.main {margin-left: 0;}
-    
+
+    div.main {
+        margin-left: 0;
+    }
+
     .main > .main-widget {
         height: 60%;
-}
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -88,7 +91,7 @@ div.main {
         text-align: center;
         float: none;
     }
-    
+
     .main > .main-widget {
         height: 20%;
     }
@@ -102,9 +105,8 @@ div.main {
     margin-top: 30%;
     margin-left: 10%;
     margin-right: 10%;
-    align-content: center
-    width: 100%; 
-    font-family:  sans-serif;
+    align-content: center width: 100%;
+    font-family: sans-serif;
 }
 
 .main > .center-search > .silvercloud-acsearch-bar > .sc-acsearch-hook > input {
@@ -117,17 +119,22 @@ div.main {
     padding-bottom: 5px;
     padding-left: 15px;
     margin-left: -15px;
-    
-    background-color: rgba(0,0,0,0.6);
+
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     font-weight: bolder;
     font-size: 24px;
-    -webkit-box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
-    box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.5);
+    transition: border-radius 1.5s ease, background-color 1.5s ease;
 }
 
 .main > .center-search > .silvercloud-acsearch-bar > .sc-acsearch-hook > input:focus {
-    background-color: rgba(0,0,0,0.8);
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    transition: border-radius 1.5s ease, background-color 1.5s ease;
 }
 
 .main > .center-search > .silvercloud-acsearch-bar > .sc-acsearch-hook > button {
@@ -138,36 +145,45 @@ div.main {
     padding-bottom: 5px;
     border-bottom-right-radius: 50px;
     border-top-right-radius: 50px;
-    
+
     background-color: #162237;
     color: #fff;
     font-weight: bolder;
     font-size: 24px;
-    -webkit-box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
-    box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.5);
+    transition: background-color 1.5s ease, color .75s ease;
 }
 
 .main > .center-search > .silvercloud-acsearch-bar > .sc-acsearch-hook > button:hover {
-    background-color: #283f66;
+    background-color: black;
     color: #efefef;
+    transition: background-color 1.5s ease, color .75s ease;
+}
+
+.main > .center-search > .silvercloud-acsearch-bar > .sc-acsearch-hook > button:focus {
+    outline: none;
 }
 
 .main > .center-search > .silvercloud-acsearch-bar > .sc-acsearch-hook > button:active {
-   background-color: #3e609b;
-    color: black; 
+    background-color: #3C4E74;
+    color: white;
 }
+
 /* results page search bar */
-.main > .upper-search > .silvercloud-search-bar {
+.main > .upper-search > .silvercloud-search-bar,
+.main > .upper-search > .silvercloud-acsearch-bar {
     margin-top: 5%;
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 5%;
     align-content: center;
-    width: 80%; 
-    font-family:  sans-serif;
+    width: 80%;
+    font-family: sans-serif;
 }
 
-.main > .upper-search > .silvercloud-search-bar > div > input {
+.main > .upper-search > .silvercloud-search-bar > div > input,
+.main > .upper-search > .silvercloud-acsearch-bar > div > input {
     width: calc(95% - 110px);
     height: 30px;
     border: none;
@@ -177,15 +193,26 @@ div.main {
     padding-bottom: 5px;
     padding-left: 15px;
     margin-left: -15px;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     font-weight: bolder;
     font-size: 24px;
-    -webkit-box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
-    box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.5);
+    transition: border-radius 1.5s ease, background-color 1.5s ease;
 }
 
-.main > .upper-search > .silvercloud-search-bar > div > button {
+.main > .upper-search > .silvercloud-search-bar > div > input:focus,
+.main > .upper-search > .silvercloud-acsearch-bar > div > input:focus {
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    transition: border-radius 1.5s ease, background-color 1.5s ease;
+}
+
+.main > .upper-search > .silvercloud-search-bar > div > button,
+.main > .upper-search > .silvercloud-acsearch-bar > div > button {
     width: 110px;
     height: 40px;
     margin-left: -5px;
@@ -198,21 +225,27 @@ div.main {
     color: #fff;
     font-weight: bolder;
     font-size: 24px;
-    -webkit-box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
-    box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.5);
 }
 
 /*results page results list */
 .main > .main-widget {
     height: 70%;
+    margin-bottom: 5%;
 }
 
-.main > .main-widget > .silvercloud-results-wrapper {
+.main > .main-widget > .silvercloud-results-wrapper,
+.main > .main-widget > .silvercloud-top-content-wrapper,
+.main > .main-widget > .silvercloud-custom-form,
+.main > .main-widget > .silvercloud-embed-answer-wrapper,
+.main > .main-widget > .silvercloud-custom-content-wrapper {
     width: 77%;
     margin-left: 9%;
+    background-color: white;
     overflow-y: scroll;
-    -webkit-box-shadow: 0 20px 100px 10px rgba(0,0,0,0.8);
-    box-shadow: 0 20px 100px 10px rgba(0,0,0,0.8);
+    -webkit-box-shadow: 0 20px 100px 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 20px 100px 10px rgba(0, 0, 0, 0.8);
 }
 
 div.ng-scope > a > div > svg {
@@ -224,18 +257,22 @@ div.ng-scope > a > div > svg {
     max-height: 35px !important;
     width: 35px !important;
     height: 35px !important;
-    -webkit-box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
-    box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.5);
 }
 
 div[ng-click="vm.showFilters = !vm.showFilters"] > svg {
     fill: #3C4E74;
 }
 
+
+
+
 /*footer */
 .sc-config-footer > p {
     margin-left: 2%;
 }
+
 .sc-config-footer > p > a > button {
     background-color: #3C4E74;
     color: white;
@@ -249,11 +286,12 @@ div[ng-click="vm.showFilters = !vm.showFilters"] > svg {
     font-weight: 600px;
 }
 
-.sc-config-footer > p > a > button: hover{
-    background-color: #283f66;
+.sc-config-footer > p > a > button: hover {
+    background-color: black;
     color: #efefef;
 }
-.sc-config-footer > p > a > button: active{
+
+.sc-config-footer > p > a > button: active {
     background-color: #3e609b;
-    color: black; 
+    color: black;
 }
